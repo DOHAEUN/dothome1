@@ -101,11 +101,8 @@
 .tit .btn {
     position: absolute;
     right: 0; top: 0;
-    display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 60px; height: 60px;
     background-image: url(../img/icon.png);
-    background-position: 0 -660px;
+    background-position: 0 -600px;
     margin-top: 5px;
 }
-.tit .btn:hover {background-position: -60px -660px;}
