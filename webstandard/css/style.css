@@ -186,3 +186,26 @@
     background-image: url(../img/icon.png);
     background-position: -150px -90px;
 }
+/* 게시판2 */
+.notice2 {position: relative;}
+.notice2 h4 {font-size: 14px; color:#0093bd; font-weight: bold; margin-top: 15px;}
+.notice2 ul {margin-top: 3px;}
+.notice2 li {
+    padding-left:8px; 
+    background: url(../img/dot.gif) no-repeat 0 8px;
+    overflow: hidden;
+    font-size: 12px;
+}
+.notice2 ul li a {
+    float: left; width: 66%; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+.notice2 ul li span {float:right ; width: 33%;}
+.notice2 a.more {
+    position: absolute; right: 0; top: 5px;
+    width: 17px; height: 17px; display: block;
+    background-image: url(../img/icon.png);
+    background-position: -150px -90px;
+}
