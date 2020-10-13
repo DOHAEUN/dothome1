@@ -306,14 +306,6 @@
 .tab_menu ul li.active ul li a {color:#333}
 
 /* 최신 공지사항 */
-/* .notice4 {position: relative;}
-.notice4 h4 {border: 1px solid #ccc; margin-top: 10px; font-size: 14px; color: blue; padding: 10px; display: block; font-weight: bold;}
-.notice4 h4 em {color: crimson}
-.notice4 ul {border: 1px solid #ccc; margin-top: -1px; padding:10px 5px;}
-.notice4 ul li {overflow: hidden; padding-left: 10px; background: url(../img/dot.gif) no-repeat 0px 8px;}
-.notice4 ul li a {float: left; width: 66%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
-.notice4 ul li span {float: right; width: 30%; display: block; }
-.notice4 .more {position: absolute; right: 10px; top: 12px;  color:#000} */
 
 .notice4 {border: 1px solid #ccc; margin-top: 15px; position: relative;}
 .notice4 h4 {border-bottom: 1px solid #ccc; padding: 8px 10px; font-weight: bold; color: royalblue;}
