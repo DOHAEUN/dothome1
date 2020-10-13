@@ -316,7 +316,7 @@
 .notice4 .more {position: absolute; right: 10px; top: 12px;  color:#000} */
 
 .notice4 {border: 1px solid #ccc; margin-top: 15px; position: relative;}
-.notice4 h4 {border-bottom: 1px solid #ccc; padding: 8px 10px; font-weight: bold;}
+.notice4 h4 {border-bottom: 1px solid #ccc; padding: 8px 10px; font-weight: bold; color: royalblue;}
 .notice4 em {color: #cf3292;}
 .notice4 ul {padding: 10px;}
 .notice4 li {overflow: hidden; background: url(../img/dot.gif) no-repeat 0 8px;}
