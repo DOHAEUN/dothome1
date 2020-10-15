@@ -19,19 +19,16 @@
     background: url(../img/header_bg.jpg) repeat-x center top;
 }
 #contents {}
-#footer { height: 200px; background: #333;}
+#footer { border-top: 1px solid #222;}
 
 /* 컨텐츠 레이아웃 */
 .cont_nav {background: #f6fdff;}
 .cont_tit {background: #eaf7fd;}
 .cont_ban {background: #dceff7 ;}
-.cont_cont {}
-
 /* 컨테이너 */
 .container {width: 990px; margin: 0 auto; height: inherit; /* background: rgba(255,255,255,0.3); */}
 
 /* header */
-.header {}
 .header .header_menu {text-align: right;}
 .header .header_menu a {
     color: #fff; 
@@ -122,7 +119,6 @@
 .ban a.next:hover {background-position: -193px -43px;}
 .ban ul {overflow: hidden;}
 .ban ul li {float: left; width: 330px;}
-.ban ul li.ban_img1 {}
 .ban ul li.ban_img2 {text-align: center;}
 .ban ul li.ban_img3 {text-align: right;}
 
@@ -315,3 +311,52 @@
 .notice4 li a {float: left; width: 65%; overflow: hidden ; white-space: nowrap; text-overflow: ellipsis; padding-left: 10px;}
 .notice4 li span {float: right; width: 30%;}
 .notice4 a.more {position: absolute; right: 9px; top: 9px;}
+
+/* 갤러리 */
+.gallery {
+    border: 1px solid #ccc; 
+    height: 255px; 
+    position: relative; 
+    overflow: hidden;
+}
+.gallery h4 {
+    font-size: 14px; 
+    color:#0093bd; 
+    padding: 10px 0 8px 11px;
+    border-bottom: 1px solid #ccc;
+}
+.gallery .gallery_btn {position:absolute; right: 5px; top: 7px;}
+.gallery_btn ul {overflow: hidden;}
+.gallery_btn li {float: left; margin: 1px 2px;}
+.gallery_btn li a {display:block; width: 23px; height: 23px; background: url(../img/icon.png);}
+.gallery_btn li.gb_icon1 a{background-position: -150px -120px;}
+.gallery_btn li.gb_icon2 a{background-position: -150px -143px;}
+.gallery_btn li.gb_icon3 a{background-position: -150px -166px;}
+.gallery_btn li.gb_icon4 a{background-position: -150px -189px;}
+.gallery_btn li.gb_icon1 a:hover{background-position: -173px -120px;}
+.gallery_btn li.gb_icon2 a:hover{background-position: -173px -143px;}
+.gallery_btn li.gb_icon3 a:hover{background-position: -173px -166px;}
+.gallery_btn li.gb_icon4 a:hover{background-position: -173px -189px;}
+.gallery_img {width: 100%;}
+
+/* 푸터 */
+.footer {text-align: center; padding: 25px 0;}
+.footer ul {}
+.footer li {display: inline; padding: 0 7px 0 10px; position: relative;}/* 글자 정렬할때는 inline 추천 */
+.footer li::before {
+    content: '';
+    width: 1px; height: 12px; background: #ccc;
+    position: absolute; left: 0; top: 2px;
+}
+.footer li:first-child::before{
+    width: 0; height: 0;
+}
+.footer address {margin-top: 20px;}
+
+/* 팝업 */
+.pop_up {}
+.pop_up h4{font-size: 14px; color:#0093bd;  font-weight: bold; padding-bottom: 3px;}
+.pop_up ul {overflow: hidden; }
+.pop_up li {width: 93px; float: left; margin-right: 5px;}
+.pop_up li:last-child {margin-right: 0;}
+.pop_up img {width: 100%;}
