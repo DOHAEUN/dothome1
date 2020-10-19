@@ -22,7 +22,7 @@
 #footer { border-top: 1px solid #222;}
 
 /* 컨텐츠 레이아웃 */
-.cont_nav {background: #f6fdff;}
+.cont_nav {background: #f6fdff; display: none;}
 .cont_tit {background: #eaf7fd;}
 .cont_ban {background: #dceff7 ;}
 /* 컨테이너 */
@@ -102,8 +102,8 @@
     right: 0; top: 5px;
     background-image: url(../img/icon.png);
     background-position: 0 -600px;
-
 }
+.tit .btn.on {background-position: 0px -660px;}
 .tit .btn:hover {background-position: -60px -600px;}
 
 /* 배너 */
@@ -304,13 +304,37 @@
 /* 최신 공지사항 */
 
 .notice4 {border: 1px solid #ccc; margin-top: 15px; position: relative;}
-.notice4 h4 {border-bottom: 1px solid #ccc; padding: 8px 10px; font-weight: bold; color: royalblue;}
+.notice4 h4 {
+    border-bottom: 1px solid #ccc; 
+    padding: 8px 10px; 
+    font-weight: bold; color: royalblue;}
 .notice4 em {color: #cf3292;}
 .notice4 ul {padding: 10px;}
-.notice4 li {overflow: hidden; background: url(../img/dot.gif) no-repeat 0 8px;}
-.notice4 li a {float: left; width: 65%; overflow: hidden ; white-space: nowrap; text-overflow: ellipsis; padding-left: 10px;}
+.notice4 li {
+    overflow: hidden; 
+    background: url(../img/dot.gif) no-repeat 0 8px;}
+.notice4 li a {
+    float: left; 
+    width: 65%; 
+    overflow: hidden ; white-space: nowrap; text-overflow: ellipsis; 
+    padding-left: 10px;
+}
 .notice4 li span {float: right; width: 30%;}
 .notice4 a.more {position: absolute; right: 9px; top: 9px;}
+
+/* 로그인 */
+#login-wrap {background: #f2f4f5; padding: 15px; margin-bottom: 15px;}
+.login_header {overflow: hidden; font-size: 12px;}
+.login_header .lh_check {float: left; padding-right: 15px;}
+.login_header .lh_check .infor_check {vertical-align: -2px;}
+.login_header .lh_ip {float: left;}
+.login_header .lh_ip em {color: #0093bd; text-decoration: underline; }
+.login_contents {position: relative; margin-top: 5px;}
+.login_contents .lc_btn {position: absolute; right: 0; top: 0; width: 62px; height: 47px; background: #fff; border: 1px solid #bebebe;}
+.login_contents .input_text {width: 182px; height: 16px; padding: 2px 5px; border: 1px solid #bebebe; margin-bottom: 3px; background: #fff;}
+.login_footer {margin-top: 5px;}
+.login_footer li {display: inline;}
+.login_footer li a {font-size: 12px;}
 
 /* 갤러리 */
 .gallery {
@@ -343,6 +367,8 @@
 .footer {text-align: center; padding: 25px 0;}
 .footer ul {}
 .footer li {display: inline; padding: 0 7px 0 10px; position: relative;}/* 글자 정렬할때는 inline 추천 */
+
+
 .footer li::before {
     content: '';
     width: 1px; height: 12px; background: #ccc;
@@ -351,6 +377,8 @@
 .footer li:first-child::before{
     width: 0; height: 0;
 }
+
+
 .footer address {margin-top: 20px;}
 
 /* 팝업 */

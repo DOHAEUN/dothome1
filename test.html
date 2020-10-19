@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        ul, li {list-style: none;}
+        a {font-style: normal; text-decoration: none; color:#000;}
+        #wrap {}
+        #header {height: 150px; background: #999;}
+        #banner {height: 200px; background: #888;}
+        #contents {}
+        .cont1 {height: 500px; background: #777;}
+        .cont2 {height: 500px; background: #666;}
+        .cont3 {height: 500px; background: #555;}
+        .cont4 {height: 500px; background: #444;}
+        .cont5 {height: 500px; overflow: hidden;}
+
+        .cont5 .left {width: 45%; float: left; position: relative; height: inherit;}
+        .cont5 h4 {font-size: 25px; margin: 100px 0 30px 0;}
+        .cont5 .left ul {border: 1px solid #ccc;}
+        .cont5 .left li {padding: 10px 0; padding: 15px 10px; border-bottom: 1px solid #ccc;}
+        .cont5 .left li a {display: inline-block; width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+        .cont5 .left li span {display: inline-block; width: 30%; text-align: right; }
+        
+        .cont5 .right {width: 45%; height: inherit; float: left; position: relative; margin-left: 50px;}
+        .cont5 .right ul {border: 1px solid #ccc;}
+        .cont5 .right li {padding: 15px 10px; border-bottom: 1px solid #ccc;}
+        .cont5 .right li:last-child{border-bottom: 0;}
+        .cont5 .right li a {display: inline-block; width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+        .cont5 .right li span {display: inline-block; width: 30%; text-align: right; }
+
+        .cont5 a.more {position: absolute; right: 0; top: 100px;}
+
+        #footer {height: 200px; background: #222;}
+
+        .container {
+            margin: 0 auto;
+            width: 1400px;
+            height: inherit;
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container"></div>
+        </div>
+        <div id="banner">
+            <div class="container"></div>
+        </div>
+        <div id="contents">
+            <div class="cont1">
+                <div class="container"></div>
+            </div>
+            <div class="cont2">
+                <div class="container"></div>
+            </div>
+            <div class="cont3">
+                <div class="container"></div>
+            </div>
+            <div class="cont4">
+                <div class="container"></div>
+            </div>
+            <div class="cont5">
+                <div class="container">
+                    <div class="left">
+                        <h4>펀드공시</h4>
+                        <ul>
+                            <li><a href="#">미래에셋코스피200인덱스증권투자신탁1호(주식-파생형) 유형변경 안내</a><span>2020.10.16</span></li>
+                            <li><a href="#">고유재산 투자펀드의 의무투자기간 종료안내</a><span>2020.10.16</span></li>
+                            <li><a href="#">소규모펀드 공시의 건(2020년 9월)</a><span>2020.10.16</span></li>
+                        </ul>
+                        <a href="#" class="more"><span>더보기</span></a>
+                    </div>
+                    <div class="right">
+                        <h4>펀드공시</h4>
+                        <ul>
+                            <li><a href="#">미래에셋코스피200인덱스증권투자신탁1호(주식-파생형) 유형변경 안내</a><span>2020.10.16</span></li>
+                            <li><a href="#">고유재산 투자펀드의 의무투자기간 종료안내</a><span>2020.10.16</span></li>
+                            <li><a href="#">소규모펀드 공시의 건(2020년 9월)</a><span>2020.10.16</span></li>
+                        </ul>
+                        <a href="#" class="more"><span>더보기</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+    </div>
+</body>
+</html>
