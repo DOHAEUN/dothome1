@@ -368,8 +368,6 @@
 .footer {text-align: center; padding: 25px 0;}
 .footer ul {}
 .footer li {display: inline; padding: 0 7px 0 10px; position: relative;}/* 글자 정렬할때는 inline 추천 */
-
-
 .footer li::before {
     content: '';
     width: 1px; height: 12px; background: #ccc;
@@ -378,8 +376,6 @@
 .footer li:first-child::before{
     width: 0; height: 0;
 }
-
-
 .footer address {margin-top: 20px;}
 
 /* 팝업 */
