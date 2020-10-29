@@ -25,16 +25,65 @@
     letter-spacing: 2px; font-weight: 900;
     color: #fff; font-size: 30px;
     padding: 5px 30px;
+    transition: box-shadow 0.3s ease-in-out;
 }
+.header_tit h1:hover {box-shadow: inset -250px 0 0 0 #4a9adf, inset 250px 0 0 0 #4a9adf; color: #fff}
 .header_tit a {
     background: #4a9adf;
     color: #fff;
     font-size: 16px; display: inline-block;
     padding: 10px 20px;
     margin-top: -7px;
+    transition: box-shadow 0.3s ease-in-out;
+    
 }
-
-/* 미디어퀘리 */
+.header_tit a:hover {
+    box-shadow: 0 0 0 5px rgba(75,154,191,0.9) inset,
+    0 0 0 100px rgba(0,0,0,0.1) inset;
+}
+header .header_icon {text-align: center; margin-top: 40px; padding-bottom: 40px;}
+.header .header_icon li {display: inline; margin: 0 2px;}
+.header .header_icon li a {
+    color: #fff; 
+    font-size: 35px; 
+    background: #3192bf;
+    width: 60px; height: 60px;
+    display: inline-block;
+    line-height: 60px;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+}
+.header .header_icon li a:hover {
+    box-shadow: 
+    0 0 0 3px rgba(75,154,191,0.9) inset,
+    0 0 0 100px rgba(0,0,0,0.1) inset
+}
+.header .header_icon li a span {
+    font-size: 12px;
+    line-height: 1.6;
+    position: absolute;
+    left: 50%; top: -45px;
+    transform: translateX(-50%);
+    background: #3192bf;
+    padding: 3px 9px;
+    border-radius: 6PX 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.header .header_icon li a:hover span{opacity: 1; top:-33px}
+.header .header_icon li a span::before {
+    content: '';
+    border-top: 5px solid #3192bf;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    left: 50%; bottom: -5px;
+    margin-left: -5px;
+}
+/* 미디어쿼리 */
 @media (max-width: 1220px){
     .container {width: 100%;}
 }
+
+.
