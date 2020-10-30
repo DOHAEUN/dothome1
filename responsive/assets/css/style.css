@@ -27,7 +27,18 @@
     padding: 5px 30px;
     transition: box-shadow 0.3s ease-in-out;
 }
-.header_tit h1:hover {box-shadow: inset -250px 0 0 0 #4a9adf, inset 250px 0 0 0 #4a9adf; color: #fff}
+.header .header_tit h1:hover {
+    box-shadow: inset 230px 0 3px 0 rgba(24, 88, 119, 0.3),
+                inset 200px 0 3px 0 rgba(24, 88, 119, 0.3),
+                inset 170px 0 3px 0 rgba(24, 88, 119, 0.3),
+                inset 140px 0 3px 0 rgba(24, 88, 119, 0.3),
+                inset 110px 0 3px 0 rgba(24, 88, 119, 0.3),
+                inset -230px 0 3px 0 rgba(24, 88, 119, 0.3),
+                inset -200px 0 3px 0 rgba(24, 88, 119, 0.3),
+                inset -170px 0 3px 0 rgba(24, 88, 119, 0.3),
+                inset -140px 0 3px 0 rgba(24, 88, 119, 0.3),
+                inset -110px 0 3px 0 rgba(24, 88, 119, 0.3);
+}
 .header_tit a {
     background: #4a9adf;
     color: #fff;
@@ -54,11 +65,7 @@ header .header_icon {text-align: center; margin-top: 40px; padding-bottom: 40px;
     position: relative;
     transition: all 0.25s ease-in-out;
 }
-.header .header_icon li a:hover {
-    box-shadow: 
-    0 0 0 3px rgba(75,154,191,0.9) inset,
-    0 0 0 100px rgba(0,0,0,0.1) inset
-}
+
 .header .header_icon li a span {
     font-size: 12px;
     line-height: 1.6;
@@ -77,9 +84,12 @@ header .header_icon {text-align: center; margin-top: 40px; padding-bottom: 40px;
     border-top: 5px solid #3192bf;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    position: absolute;
-    left: 50%; bottom: -5px;
+    position: absolute; left: 50%; bottom: -5px;
     margin-left: -5px;
+}
+.header .header_icon li a:hover {
+    box-shadow: 0 0 0 3px rgba(75, 154, 191, 0.9) inset,
+                0 0 0 100px rgba(0, 0, 0, 0.1) inset
 }
 /* 미디어쿼리 */
 @media (max-width: 1220px){
