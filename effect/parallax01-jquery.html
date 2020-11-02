@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <title>parallax01-jquery</title>
+    <style>
+        /* reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+        a {
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        /* font */
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* main */
+        body {
+            --color-h1: #de6e25; /* --는 변수 선언 = var coolor="#de6e25*/
+            --color-title: #fff;
+            --color-sub: #999;
+            --color-link: #000;
+            --color-bg: #111;
+            --font-nexon: 'NEXON Lv1 Gothic OTF';
+            --font-lato: 'Lato', sans-serif;
+
+            background-color: var(--color-bg);
+            color: var(--color-title);
+            font-family: var(--font-nexon);
+        }
+        #parallax-Wrap h1{
+            color: var(--color-h1);
+            font-family: var(--font-lato);
+            font-size: 8vw;
+            padding: 10vw 8vw 0 8vw;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        #parallax-Wrap h1 em {
+            display: block;
+            font-weight: 100;
+            padding-left: 18vw;
+        }
+        .contents {
+            margin: 0 auto 35vh;
+            width: 100%;
+        }
+        .content-item {
+            width: 1000px;
+            max-width: 90vw;
+            margin: 60vh 0 60vh;
+            position: relative;
+        }
+        .content-item:nth-child(even) {
+            margin-left: auto;
+        }
+        .content-item-num {
+            font-size: 25vw;
+            font-weight: 100;
+            font-family: var(--font-lato);
+            right: -5vw;
+            top: -20vw;
+            opacity: 0.1;
+            position: absolute;
+        }
+        .content-item:nth-child(odd) .content-item-title{
+            text-align: right;
+        }
+        .content-item:nth-child(even) .content-item-num {
+            right: auto;
+            left: -5vw;
+        }
+        .content-item-imgWrap {
+            width: 100%;
+            padding-bottom: 50%;
+            position: relative;
+        }
+        .content-item-img { 
+            width: 100%;
+            position: absolute;
+            left: 0; top: 0;
+            height: 100%;
+        }
+        .content-item-desc {
+            font-size: 5vw;
+            line-height: 1.4;
+            text-align: right;
+            word-break: keep-all;
+            margin-right: -4vw;
+            margin-top: -6vw;
+            z-index: 100;
+            position: relative;
+        }
+        .content-item:nth-child(even) .content-item-desc{
+            text-align: left;
+            margin-right: auto;
+            margin-left: -4vw;
+            padding-left: 0;
+        }
+        #section1 .content-item-img{
+            background: url(img/image01.jpg);
+            background-size: cover;
+        }
+        #section2 .content-item-img{
+            background: url(img/image02.jpg);
+            background-size: cover;
+        }
+        #section3 .content-item-img{
+            background: url(img/image03.jpg);
+            background-size: cover;
+        }
+        #section4 .content-item-img{
+            background: url(img/image04.jpg);
+            background-size: cover;
+        }
+        #section5 .content-item-img{
+            background: url(img/image05.jpg);
+            background-size: cover;
+        }
+        #section6 .content-item-img{
+            background: url(img/image06.jpg);
+            background-size: cover;
+        }
+        #section7 .content-item-img{
+            background: url(img/image07.jpg);
+            background-size: cover;
+        }
+        #section8 .content-item-img{
+            background: url(img/image08.jpg);
+            background-size: cover;
+        }
+        #section9 .content-item-img{
+            background: url(img/image09.jpg);
+            background-size: cover;
+        }
+        /* position : relative의 기능
+        1. position: absolute 기준점 역할
+        2. position: absolute를 사용하지 않고 z-index를 사용할 경우
+        3. position:  */
+    </style>
+    
+</head>
+<body>
+    
+    <main>
+        <section id="parallax-Wrap">
+            <h1>Parallax <em>Scrolling</em></h1>
+            <div class="contents"> 
+                <div id="section1" class="content-item">
+                    <span class="content-item-num">01</span>
+                    <h2 class="content-item-title">Section1</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">피할수 없으면 즐겨라 로버트 엘리엇</p>
+                </div>
+                <div id="section2" class="content-item">
+                    <span class="content-item-num">02</span>
+                    <h2 class="content-item-title">Section2</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">행복은 습관이다,그것을 몸에 지니라 <br>허버드</p>
+                </div>
+                <div id="section3" class="content-item">
+                    <span class="content-item-num">03</span>
+                    <h2 class="content-item-title">Section3</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">자신감 있는 표정을 지으면 자신감이 생긴다 찰스다윈</p>
+                </div>
+                <div id="section4" class="content-item">
+                    <span class="content-item-num">04</span>
+                    <h2 class="content-item-title">Section4</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">1퍼센트의 가능성, 그것이 나의 길이다. <br>나폴레옹</p>
+                </div>
+                <div id="section5" class="content-item">
+                    <span class="content-item-num">05</span>
+                    <h2 class="content-item-title">Section5</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">자신을 내보여라. 그러면 재능이 드러날 것이다. 발타사르 그라시안 </p>
+                </div>
+                <div id="section6" class="content-item">
+                    <span class="content-item-num">06</span>
+                    <h2 class="content-item-title">Section6</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">작은 기회로 부터 종종 위대한 업적이 시작된다 데모스테네스</p>
+                </div>
+                <div id="section7" class="content-item">
+                    <span class="content-item-num">07</span>
+                    <h2 class="content-item-title">Section7</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">최고에 도달하려면 최저에서 시작하라.<br>P.시루스</p>
+                </div>
+                <div id="section8" class="content-item">
+                    <span class="content-item-num">08</span>
+                    <h2 class="content-item-title">Section8</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">겨울이 오면 봄이 멀지 않으리.<br>셸리</p>
+                </div>
+                <div id="section9" class="content-item">
+                    <span class="content-item-num">09</span>
+                    <h2 class="content-item-title">Section9</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">문제점을 찾지 말고 해결책을 찾으라 헨리포드 </p>
+                </div>
+            </div>
+        </section>    
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+</body>
+</html>
