@@ -11,9 +11,11 @@
             box-sizing: border-box;
             margin: 0; padding: 0;
         }
+        ul {list-style: none;}
         a {
             text-decoration: none;
-            transition: all 0.2s;
+            transition: all 0.2s;;
+            color: #fff;
         }
         img {
             width: 100%;
@@ -25,6 +27,29 @@
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
             font-weight: normal;
             font-style: normal;
+        }
+        /* info */
+        .info {position: fixed; z-index: 1000;}
+        .info.left {left: 20px; top: 20px;}
+        .info.right{right: 20px; top: 20px;}
+        .info.bottom {right: 20px; bottom: 20px;}
+        .info h1 {font-size: 2rem; line-height: 1.4;}
+        .info p {font-size: 1rem;}
+        .info li {font-size: 1rem; line-height: 1.4;}
+        .info li a {
+            color: fff;
+            width: 25px; height: 25px; 
+            border: 1px dashed #fff; 
+            display: inline-block;
+            border-radius: 50%; 
+            line-height: 25px;
+            font-size: 0.8rem;
+            margin: 5px;
+            text-align: center;
+        }
+        .info li a.active {background: #fff; color: #000;}
+        @media (max-width: 800px){
+            .info h1{display: none;}
         }
         /* main */
         body {
@@ -145,6 +170,57 @@
             background: url(img/image09.jpg);
             background-size: cover;
         }
+        
+        /* 한 번에 나타내기*/
+        /*
+        .contents > section {
+            opacity: 0;
+            transform: translateY(200px);
+            transition: all 1s;
+        }
+        .contents > section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        */
+        /* 개별적으로 나타내기 */
+        .contents > section .content-item-num{
+            opacity: 0; 
+            transform: translateY(200px);
+            transition: all 1s 0.1s cubic-bezier(0, 0.68, 0.22, 0.99);
+        }
+        .contents > section .content-item-title {
+            opacity: 0; 
+            transform: translateX(-200px);
+            transition: all 1s 0.3s cubic-bezier(0, 0.68, 0.22, 0.99);
+        }
+        .contents > section .content-item-imgWrap {
+            opacity: 0; 
+            transform: translateY(200px);
+            transition: all 1s 0.6s cubic-bezier(0, 0.68, 0.22, 0.99);
+        }
+        .contents > section .content-item-desc {
+            opacity: 0; 
+            transform: translateX(-200px);
+            transition: all 1s 0.9s cubic-bezier(0, 0.68, 0.22, 0.99);
+        }
+        .contents > section.show .content-item-num {
+            opacity: 0.7;
+            transform:translateY(0)
+        }
+        .contents > section.show .content-item-title {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .contents > section.show .content-item-imgWrap {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .contents > section.show .content-item-desc {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
         /* position : relative의 기능
         1. position: absolute 기준점 역할
         2. position: absolute를 사용하지 않고 z-index를 사용할 경우
@@ -153,87 +229,210 @@
     
 </head>
 <body>
-    
+    <div class="info left">
+        <h1>Parallax Effect01 - JQuery</h1>
+        <p>패랠랙스 스크로링 효과 - 기본</p>
+    </div>    
+    <div class="info right">
+        <ul>
+            <li><a href="parallax01-jquery.html" class="active">1</a><a href="paralax01-jquery.htm">1</a></li>
+            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-jquery.html">2</a></li>
+            <li><a href="parallax03-jquery.html">3</a><a href="parallax03-jquery.html">3</a></li>
+            <li><a href="parallax04-jquery.html">4</a><a href="parallax04-jquery.html">4</a></li>
+            <li><a href="parallax05-jquery.html">5</a><a href="parallax05-jquery.html">5</a></li>
+            <li><a href="parallax06-jquery.html">6</a><a href="parallax06-jquery.html">6</a></li>
+            <li><a href="parallax07-jquery.html">7</a><a href="parallax07-jquery.html">7</a></li>
+            <li><a href="parallax08-jquery.html">8</a><a href="parallax08-jquery.html">8</a></li>
+            <li><a href="parallax09-jquery.html">9</a><a href="parallax09-jquery.html">9</a></li>
+            <li><a href="parallax10-jquery.html">10</a><a href="parallaxl0-jquery.html">10</a></li>
+        </ul>
+    </div>
+    <div class="info bottom">
+        <ul>
+            <li>scrollTop(): <span class="scrollTop">1</span></li>
+            <li>scrollTop()1: <span class="s1OffsetTop">2</span></li>
+            <li>scrollTop()2: <span class="s2OffsetTop">3</span></li>
+            <li>scrollTop()3: <span class="s3OffsetTop">4</span></li>
+            <li>scrollTop()4: <span class="s4OffsetTop">5</span></li>
+            <li>scrollTop()5: <span class="s5OffsetTop">6</span></li>
+            <li>scrollTop()6: <span class="s6OffsetTop">7</span></li>
+            <li>scrollTop()7: <span class="s7OffsetTop">8</span></li>
+            <li>scrollTop()8: <span class="s8OffsetTop">9</span></li>
+            <li>scrollTop()9: <span class="s9OffsetTop">10</span></li>
+        </ul>
+    </div>
+    <!-- //info -->
     <main>
         <section id="parallax-Wrap">
             <h1>Parallax <em>Scrolling</em></h1>
             <div class="contents"> 
-                <div id="section1" class="content-item">
+                <section id="section1" class="content-item">
                     <span class="content-item-num">01</span>
                     <h2 class="content-item-title">Section1</h2>
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">피할수 없으면 즐겨라 로버트 엘리엇</p>
-                </div>
-                <div id="section2" class="content-item">
+                </section>
+                <section id="section2" class="content-item">
                     <span class="content-item-num">02</span>
                     <h2 class="content-item-title">Section2</h2>
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">행복은 습관이다,그것을 몸에 지니라 <br>허버드</p>
-                </div>
-                <div id="section3" class="content-item">
+                </section>
+                <section id="section3" class="content-item">
                     <span class="content-item-num">03</span>
                     <h2 class="content-item-title">Section3</h2>
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">자신감 있는 표정을 지으면 자신감이 생긴다 찰스다윈</p>
-                </div>
-                <div id="section4" class="content-item">
+                </section>
+                <section id="section4" class="content-item">
                     <span class="content-item-num">04</span>
                     <h2 class="content-item-title">Section4</h2>
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">1퍼센트의 가능성, 그것이 나의 길이다. <br>나폴레옹</p>
-                </div>
-                <div id="section5" class="content-item">
+                </section>
+                <section id="section5" class="content-item">
                     <span class="content-item-num">05</span>
                     <h2 class="content-item-title">Section5</h2>
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">자신을 내보여라. 그러면 재능이 드러날 것이다. 발타사르 그라시안 </p>
-                </div>
-                <div id="section6" class="content-item">
+                </section>
+                <section id="section6" class="content-item">
                     <span class="content-item-num">06</span>
                     <h2 class="content-item-title">Section6</h2>
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">작은 기회로 부터 종종 위대한 업적이 시작된다 데모스테네스</p>
-                </div>
-                <div id="section7" class="content-item">
+                </section>
+                <section id="section7" class="content-item">
                     <span class="content-item-num">07</span>
                     <h2 class="content-item-title">Section7</h2>
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">최고에 도달하려면 최저에서 시작하라.<br>P.시루스</p>
-                </div>
-                <div id="section8" class="content-item">
+                </section>
+                <section id="section8" class="content-item">
                     <span class="content-item-num">08</span>
                     <h2 class="content-item-title">Section8</h2>
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">겨울이 오면 봄이 멀지 않으리.<br>셸리</p>
-                </div>
-                <div id="section9" class="content-item">
+                </section>
+                <section id="section9" class="content-item">
                     <span class="content-item-num">09</span>
                     <h2 class="content-item-title">Section9</h2>
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">문제점을 찾지 말고 해결책을 찾으라 헨리포드 </p>
-                </div>
+                </section>
             </div>
         </section>    
     </main>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+       $(window).scroll(function(){
+            const scrollTop = $(window).scrollTop() + $(window).height()/2;
+            // 출력용 for문
+            $(".scrollTop").text(parseInt(scrollTop));
+            $(".s1OffsetTop").text(parseInt($("#section1").offset().top));
+            $(".s2OffsetTop").text(parseInt($("#section2").offset().top));
+            $(".s3OffsetTop").text(parseInt($("#section3").offset().top));
+            $(".s4OffsetTop").text(parseInt($("#section4").offset().top));
+            $(".s5OffsetTop").text(parseInt($("#section5").offset().top));
+            $(".s6OffsetTop").text(parseInt($("#section6").offset().top));
+            $(".s7OffsetTop").text(parseInt($("#section7").offset().top));
+            $(".s8OffsetTop").text(parseInt($("#section8").offset().top));
+            $(".s9OffsetTop").text(parseInt($("#section9").offset().top));
+            // for문
+            if( scrollTop > $("#section1").offset().top ){
+                $(".s1OffsetTop").css("color","red");
+            } else {
+                $(".s1OffsetTop").css("color","white");
+            }
+            if( scrollTop > $("#section2").offset().top ){
+                $(".s2OffsetTop").css("color","red");
+            } else {
+                $(".s2OffsetTop").css("color","white");
+            }
+            if( scrollTop > $("#section3").offset().top ){
+                $(".s3OffsetTop").css("color","red");
+            } else {
+                $(".s3OffsetTop").css("color","white");
+            }
+            if( scrollTop > $("#section4").offset().top ){
+                $(".s4OffsetTop").css("color","red");
+            } else {
+                $(".s4OffsetTop").css("color","white");
+            }
+            if( scrollTop > $("#section5").offset().top ){
+                $(".s5OffsetTop").css("color","red");
+            } else {
+                $(".s5OffsetTop").css("color","white");
+            }
+            if( scrollTop > $("#section6").offset().top ){
+                $(".s6OffsetTop").css("color","red");
+            } else {
+                $(".s6OffsetTop").css("color","white");
+            }
+            if( scrollTop > $("#section7").offset().top ){
+                $(".s7OffsetTop").css("color","red");
+            } else {
+                $(".s7OffsetTop").css("color","white");
+            }
+            if( scrollTop > $("#section8").offset().top ){
+                $(".s8OffsetTop").css("color","red");
+            } else {
+                $(".s8OffsetTop").css("color","white");
+            }
+            if( scrollTop > $("#section9").offset().top ){
+                $(".s9OffsetTop").css("color","red");
+            } else {
+                $(".s9OffsetTop").css("color","white");
+            }
+            // 나타내기 for문
+            if( scrollTop > $("#section1").offset().top ){
+                $("#section1").addClass("show");
+            }
+            if( scrollTop > $("#section2").offset().top ){
+                $("#section2").addClass("show");
+            }
+            if( scrollTop > $("#section3").offset().top ){
+                $("#section3").addClass("show");
+            }
+            if( scrollTop > $("#section4").offset().top ){
+                $("#section4").addClass("show");
+            }
+            if( scrollTop > $("#section5").offset().top ){
+                $("#section5").addClass("show");
+            }
+            if( scrollTop > $("#section6").offset().top ){
+                $("#section6").addClass("show");
+            }
+            if( scrollTop > $("#section7").offset().top ){
+                $("#section7").addClass("show");
+            }
+            if( scrollTop > $("#section8").offset().top ){
+                $("#section8").addClass("show");
+            }
+            if( scrollTop > $("#section9").offset().top ){
+                $("#section9").addClass("show");
+            }
+        });
+
+    </script>    
 </body>
 </html>
