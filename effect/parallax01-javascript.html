@@ -350,20 +350,13 @@
         let pageYOffset = window.pageYOffset;
 
         // 출력용
-        document.querySelector(".pageYOffset").innerText = pageYOffset;
+        document.querySelector(".pageYOffset").innerText = parseInt(pageYOffset);
         document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
         document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
-        document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
-        document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
-        document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
-        document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
-        document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
-        document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
-        document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
 
-        if(pageYOffset > getElementById("#section1").offsetTop){
-            document.querySelector(".s1OffsetTop").setAttribute("color", "red")
-        }
+        // if(pageYOffset > getElementById("#section1").offsetTop){
+        //     document.querySelector(".s1OffsetTop").setAttribute("color", "red")
+        // }
     });
 
     </script>    
