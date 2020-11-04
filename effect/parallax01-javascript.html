@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-    <title>parallax01-jquery</title>
+    <title>parallax01-javascript</title>
     <style>
         /* reset */
         *, *::before, *::after {
@@ -23,8 +23,8 @@
         }
         /* font */
         @font-face {
-            font-family: 'NEXON Lv1 Gothic OTF';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-family: 'Jal_Onuel';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Onuel.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
@@ -57,8 +57,8 @@
             --color-title: #fff;
             --color-sub: #999;
             --color-link: #000;
-            --color-bg: #111;
-            --font-nexon: 'NEXON Lv1 Gothic OTF';
+            --color-bg: #f2f2f2;
+            --font-nexon: 'Jal_Onuel';
             --font-lato: 'Lato', sans-serif;
 
             background-color: var(--color-bg);
@@ -172,7 +172,7 @@
         }
         
         /* 한 번에 나타내기*/
-        /*
+        
         .contents > section {
             opacity: 0;
             transform: translateY(200px);
@@ -183,7 +183,7 @@
             transform: translateY(0);
         }
         */
-        /* 개별적으로 나타내기 */
+        개별적으로 나타내기
         .contents > section .content-item-num{
             opacity: 0; 
             transform: translateY(200px);
@@ -224,7 +224,7 @@
         /* position : relative의 기능
         1. position: absolute 기준점 역할
         2. position: absolute를 사용하지 않고 z-index를 사용할 경우
-        3. position:  */
+        3. position: */
     </style>
     
 </head>
@@ -249,7 +249,7 @@
     </div>
     <div class="info bottom">
         <ul>
-            <li>scrollTop():  <span class="scrollTop">1</span></li>
+            <li>scrollTop():  <span class="pageYOffset">1</span></li>
             <li>scrollTop()1: <span class="s1OffsetTop">2</span></li>
             <li>scrollTop()2: <span class="s2OffsetTop">3</span></li>
             <li>scrollTop()3: <span class="s3OffsetTop">4</span></li>
@@ -274,7 +274,7 @@
                     </figure>
                     <p class="content-item-desc">피할수 없으면 즐겨라 로버트 엘리엇</p>
                 </section>
-                <section id="section2" class="content-item">
+                <section id="c" class="content-item">
                     <span class="content-item-num">02</span>
                     <h2 class="content-item-title">Section2</h2>
                     <figure class="content-item-imgWrap">
@@ -342,105 +342,30 @@
         </section>    
     </main>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
     // $(window).scroll(function(){
-    //         const scrollTop = $(window).scrollTop()
-            
-            //  출력용
-            // $(".scrollTop").text(parseInt(scrollTop));
-            // $(".s1OffsetTop").text(parseInt($("#section1").offset().top));
-            // $(".s2OffsetTop").text(parseInt($("#section2").offset().top));
-            // $(".s3OffsetTop").text(parseInt($("#section3").offset().top));
-            // $(".s4OffsetTop").text(parseInt($("#section4").offset().top));
-            // $(".s5OffsetTop").text(parseInt($("#section5").offset().top));
-            // $(".s6OffsetTop").text(parseInt($("#section6").offset().top));
-            // $(".s7OffsetTop").text(parseInt($("#section7").offset().top));
-            // $(".s8OffsetTop").text(parseInt($("#section8").offset().top));
-            // $(".s9OffsetTop").text(parseInt($("#section9").offset().top));
-            
-            // 출력용 글씨 색 
-            // if(scrollTop > $("#section1").offset().top){
-            //     $('.s1OffsetTop').css("color", "red")
-            // } else {
-            //     $('.s1OffsetTop').css("color", "#fff")
-            // }
-            // if(scrollTop > $("#section2").offset().top){
-            //     $('.s2OffsetTop').css("color", "red")
-            // } else {
-            //     $('.s2OffsetTop').css("color", "#fff")
-            // }
-            // if(scrollTop > $("#section3").offset().top){
-            //     $('.s3OffsetTop').css("color", "red")
-            // } else {
-            //     $('.s3OffsetTop').css("color", "#fff")
-            // }
-            // if(scrollTop > $("#section4").offset().top){
-            //     $('.s4OffsetTop').css("color", "red")
-            // } else {
-            //     $('.s4OffsetTop').css("color", "#fff")
-            // }
-            // if(scrollTop > $("#section5").offset().top){
-            //     $('.s5OffsetTop').css("color", "red")
-            // } else {
-            //     $('.s5OffsetTop').css("color", "#fff")
-            // }
-            // if(scrollTop > $("#section6").offset().top){
-            //     $('.s6OffsetTop').css("color", "red")
-            // } else {
-            //     $('.s6OffsetTop').css("color", "#fff")
-            // }
-            // if(scrollTop > $("#section7").offset().top){
-            //     $('.s7OffsetTop').css("color", "red")
-            // } else {
-            //     $('.s7OffsetTop').css("color", "#fff")
-            // }
-            // if(scrollTop > $("#section8").offset().top){
-            //     $('.s8OffsetTop').css("color", "red")
-            // } else {
-            //     $('.s8OffsetTop').css("color", "#fff")
-            // }
-            // if(scrollTop > $("#section9").offset().top){
-            //     $('.s9OffsetTop').css("color", "red")
-            // } else {
-            //     $('.s9OffsetTop').css("color", "#fff")
-            // };
-            
-            // 보여지기
+    //         const scrollTop = $(window).scrollTop() + $(window).height()/2;
     // });
-    
-    // for문
-    // $(window).scroll(function(){
-    //     const scrollTop = $(window).scrollTop();
-    //     $(".scrollTop").text(parseInt(scrollTop));
-    //     // 출력용
-    //     for(let i=1; i<=9; i++){
-    //             $(".s"+i+"OffsetTop").text(parseInt($("#section"+i).offset().top));
-    //         };
-    //     // 출력용 색
-    //     for(let i=1; i<=9; i++){
-    //         if(scrollTop > $("#section"+i).offset().top){
-    //             $('.s'+i+'OffsetTop').css("color", "red")
-    //         } else {
-    //             $('.s'+i+'OffsetTop').css("color", "#fff")
-    //         }
-    //     };
-    // })
+    window.addEventListener("scroll", function(){
+        let pageYOffset = window.pageYOffset;
 
-    // each()
-    $(window).scroll(function(){
-        const scrollTop = $(window).scrollTop();
-        $(".scrollTop").text(parseInt(scrollTop));
-        
-        $(".content-item").each(function(num){
-            $(".s"+(num+1)+"OffsetTop").text(parseInt($("#section"+(num+1)).offset().top));
-            if(scrollTop > $(this).offset().top){
-                $(".s"+(num+1)+"OffsetTop").css("color", "red")
-            } else {
-                $(".s"+(num+1)+"OffsetTop").css("color", "#fff")
-            }
-        });
+        // 출력용
+        document.querySelector(".pageYOffset").innerText = pageYOffset;
+        document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
+        document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
+        document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
+        document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
+        document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
+        document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
+        document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
+        document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
+        document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
+
+        if(pageYOffset > getElementById("#section1").offsetTop){
+            document.querySelector(".s1OffsetTop").setAttribute("color", "red")
+        }
     });
+
     </script>    
 </body>
 </html>
