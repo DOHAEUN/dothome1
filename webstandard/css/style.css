@@ -108,8 +108,9 @@
 .tit .btn:hover {background-position: -60px -600px;}
 
 /* 배너 */
+
 .ban {position: relative; padding: 24px 0px;}/* position:relative는 absolute를 쓸 때 기준점이 된다. */
-.ban > a {
+/* .ban > a {
     position: absolute; 
     width: 43px; height: 43px; 
     background-image: url(../img/icon.png);
@@ -118,11 +119,41 @@
 .ban a.prev:hover {background-position: -193px 0px;}
 .ban a.next { right: -80px; top: 60px; background-position: -150px -43px;}
 .ban a.next:hover {background-position: -193px -43px;}
-.ban ul {overflow: hidden;}
+.cont_ban {overflow: hidden;} */
+.ban_img {margin-left: 15px;}
+.ban .ban_img div a{float: left; width: 330px; margin:0px 10px;}
+/* .ban ul {overflow: hidden;}
 .ban ul li {float: left; width: 330px;}
 .ban ul li.ban_img2 {text-align: center;}
-.ban ul li.ban_img3 {text-align: right;}
-
+.ban ul li.ban_img3 {text-align: right;} */
+.ban_img .slick-prev {
+    position: absolute;
+    left: -50px; top: 50px;
+    text-indent: -9999px;
+    width: 43px; height: 43px;
+    border-radius: 50%;
+    border: 0;
+    background: url(../img/icon.png);
+    background-position: -150px 0;
+}
+.ban_img .slick-prev:hover {
+    background: url(../img/icon.png);
+    background-position: -193px 0;
+}
+.ban_img .slick-next {
+        position: absolute;
+        right: -50px; top: 50px;
+        text-indent: -9999px;
+        width: 43px; height: 43px;
+        border-radius: 50%;
+        border: 0;
+        background: url(../img/icon.png);
+        background-position: -150px -43px;
+}
+.ban_img .slick-next:hover {
+    background: url(../img/icon.png);
+    background-position: -193px -43px;
+}
 /* 컨텐츠 */
 .cont {overflow: hidden; padding-top: 30px;}
 .cont .column {
@@ -379,9 +410,14 @@
 .footer address {margin-top: 20px;}
 
 /* 팝업 */
-.pop_up {}
+/* .pop_up {}
 .pop_up h4{font-size: 14px; color:#0093bd;  font-weight: bold; padding-bottom: 3px;}
 .pop_up ul {overflow: hidden; }
 .pop_up li {width: 93px; float: left; margin-right: 5px;}
 .pop_up li:last-child {margin-right: 0;}
+.pop_up img {width: 100%;} */
+.pop_up {}
+.pop_up h4{font-size: 14px; color:#0093bd;  font-weight: bold; padding-bottom: 3px;}
+.pop_up {overflow: hidden; box-sizing: border-box;}
+.popup_img a {width: 90px; float: left; margin-right: 5px;}
 .pop_up img {width: 100%;}
